@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private loadFeature: string = 'recipe';
+
+  enableFeature(feature: string) {
+    this.loadFeature = feature;
+  }
 }
