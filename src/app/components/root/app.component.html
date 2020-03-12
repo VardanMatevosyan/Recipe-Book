@@ -1,10 +1,8 @@
-<app-header (featureClicked)="enableFeature($event)"></app-header>
+<app-header></app-header>
 <div class="container">
   <div class="row">
      <div class="col-md-12">
-
-       <app-recipes *ngIf="loadFeature === 'recipe'"></app-recipes>
-       <app-shopping-list *ngIf="loadFeature === 'shoppingList'"></app-shopping-list>
+       <router-outlet></router-outlet>
      </div>
   </div>
 </div>
