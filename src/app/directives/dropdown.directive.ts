@@ -4,8 +4,8 @@ import {Directive, ElementRef, HostBinding, HostListener, Renderer2} from '@angu
   selector: '[appDropdownDirective]'
 })
 export class DropdownDirective {
-  private OPEN: string = 'open';
   @HostBinding('class.open') isOpen = false;
+
   constructor(private elemRef: ElementRef) { }
 
   @HostListener('document:click', ['$event']) toggleOpen(event: Event): void {
