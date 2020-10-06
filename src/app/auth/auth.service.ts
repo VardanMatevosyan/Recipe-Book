@@ -5,6 +5,7 @@ import {AuthResponseModel} from './auth-response-model';
 import {catchError, tap} from 'rxjs/operators';
 import {User} from './user.moderl';
 import {Router} from '@angular/router';
+import {environment} from '../../environments/environment';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -15,7 +16,7 @@ export class AuthService {
 
   signUp(email: string, password: string): Observable<AuthResponseModel> {
     return this.http.post<AuthResponseModel>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyD9LnZWDn6UqOQnW8_Wp6LKaqYeDm2CFA4',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + environment.fireBaseApiKey,
       {
         email: email,
         password: password,
@@ -31,7 +32,7 @@ export class AuthService {
 
   login(email: string, password: string): Observable<AuthResponseModel> {
     return this.http.post<AuthResponseModel>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD9LnZWDn6UqOQnW8_Wp6LKaqYeDm2CFA4',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + environment.fireBaseApiKey,
       {
         email: email,
         password: password,
