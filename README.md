@@ -1,4 +1,6 @@
 # Recipe Book
+Deployed to firebase - https://recipe-book-95d5f.web.app
+Deployed to AWS S3 - http://recipe-book-mvt.s3-website.eu-central-1.amazonaws.com/recipes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
