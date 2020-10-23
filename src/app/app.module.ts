@@ -4,10 +4,10 @@ import {AppComponent} from './components/root/app.component';
 import {HeaderComponent} from './components/header/header.component';
 import {AppRoutingModule} from './app.routing.module';
 import {HttpClientModule} from '@angular/common/http';
-import {ShopModule} from './components/shop/shop.module';
 import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core.module';
-import {AuthModule} from './auth/auth.module';
+import {StoreModule} from '@ngrx/store';
+import * as fromApp from './store/app.reducer';
 
 
 @NgModule({
@@ -21,6 +21,7 @@ import {AuthModule} from './auth/auth.module';
     AppRoutingModule,
     SharedModule,
     CoreModule,
+    StoreModule.forRoot(fromApp.appReducer)
   ],
   bootstrap: [AppComponent]
 })
