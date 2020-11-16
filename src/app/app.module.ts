@@ -16,12 +16,12 @@ import * as fromApp from './store/app.reducer';
     HeaderComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'my-first-app' }),
     HttpClientModule,
     AppRoutingModule,
+    StoreModule.forRoot(fromApp.appReducer),
     SharedModule,
-    CoreModule,
-    StoreModule.forRoot(fromApp.appReducer)
+    CoreModule
   ],
   bootstrap: [AppComponent]
 })
