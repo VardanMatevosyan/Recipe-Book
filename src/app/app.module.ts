@@ -8,6 +8,7 @@ import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core.module';
 import {StoreModule} from '@ngrx/store';
 import * as fromApp from './store/app.reducer';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import * as fromApp from './store/app.reducer';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-first-app' }),
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(fromApp.appReducer),

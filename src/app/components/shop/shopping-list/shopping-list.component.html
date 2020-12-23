@@ -3,7 +3,7 @@
     <app-shopping-edit></app-shopping-edit>
     <hr>
     <ul class="list-group">
-      <a
+      <a [@movable]
          class="list-group-item"
          style="cursor: pointer"
          *ngFor="let ingredient of (ingredients | async).ingredients; let i = index"
